@@ -43,6 +43,9 @@ end
  gem 'thor', '0.19.1'
 
  gem 'bootstrap-sass'
+ 
+ gem 'pry-rails', :group => :development
+
 
  group :development do
    gem 'listen', '~> 3.0.5'
