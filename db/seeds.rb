@@ -21,6 +21,10 @@ require 'random_data'
    )
  end
 
+ puts "#{Post.count}"
+ Post.find_or_create_by(title: "Porsche 911", body:"is a two-door, 2+2 high performance Rear engine classic German sports car made since 1963 by Porsche AG of Stuttgart, Germany.")
+ puts "#{Post.count}"
+
  puts "Seed finished"
  puts "#{Post.count} posts created"
  puts "#{Comment.count} comments created"
