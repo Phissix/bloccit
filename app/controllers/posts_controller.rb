@@ -3,9 +3,8 @@ class PostsController < ApplicationController
     @posts = Post.all
 
   end
-
+    @advertisement = Advertisement.find(params[:id])
   def show
-    @post = Post.find(params[:id])
 
   end
 
