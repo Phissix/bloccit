@@ -22,10 +22,10 @@ require 'random_data'
  end
 
  puts "#{Post.count}"
- Post.find_or_create_by(title: "Porsche 911", body:"is a two-door,
+ post_v = Post.find_or_create_by!(title: "Porsche 911", body:"is a two-door,
    2+2 high performance Rear engine classic German sports car made since 1963 by Porsche AG of Stuttgart, Germany.")
 
- Comment.find_or_create_by(post: posts.first, body:"My dream car.")
+ Comment.find_or_create_by!(post: post_v, body:"My dream car.")
  puts "#{Post.count}"
 
  puts "Seed finished"
