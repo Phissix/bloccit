@@ -45,6 +45,9 @@ end
 
  gem 'bootstrap-sass'
 
+ # Used for encrypting passwords
+ gem 'bcrypt'
+
  group :development do
    gem 'listen', '~> 3.0.5'
  end
