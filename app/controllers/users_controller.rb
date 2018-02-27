@@ -1,6 +1,17 @@
 class UsersController < ApplicationController
+  #fix for authenticity token
+  skip_before_action :verify_authenticity_token
+
   def new
      @user = User.new
+  end
+  #confirm b4 create
+  def confirm
+     @user = User.new
+     @user.name = params[:user][:name]
+     @user.email = params[:user][:email]
+     @user.password = params[:user][:password]
+     @user.password_confirmation = params[:user][:password_confirmation]
   end
 
   def create

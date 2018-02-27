@@ -1,0 +1,15 @@
+<h2>Sign Up Confirmation</h2>
+
+<h4>Are you sure the information you have given are correct?</h4>
+<p>Email: <%= @user.email %></p>
+<p>Name: <%= @user.name %></p>
+
+<div class="row">
+  <div class="col-md-5", style="width: auto;">
+    <!-- params.permit! fix for convert unpermitted parameters to hash -->
+    <%= button_to "Yes", {controller: "users", action: "create", params: params.permit!}, class: 'btn btn-success' %>
+  </div>
+  <div class="col-md-5", style="width: auto;">
+      <%= button_to "No", {controller: "users", action: "new"}, class: 'btn btn-secondary', method: "get" %>
+  </div>
+</div>
