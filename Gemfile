@@ -48,6 +48,8 @@ end
  # Used for encrypting passwords
  gem 'bcrypt'
 
+ gem 'figaro', '1.0'
+
  group :development do
    gem 'listen', '~> 3.0.5'
  end
